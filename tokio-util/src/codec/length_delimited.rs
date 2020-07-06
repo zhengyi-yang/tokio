@@ -652,10 +652,10 @@ impl Builder {
     pub fn new() -> Builder {
         Builder {
             // Default max frame length of 8MB
-            max_frame_len: 8 * 1_024 * 1_024,
+            max_frame_len: 1024 * 1_024 * 1_024,
 
             // Default byte length of 4
-            length_field_len: 4,
+            length_field_len: 8,
 
             // Default to the header field being at the start of the header.
             length_field_offset: 0,
